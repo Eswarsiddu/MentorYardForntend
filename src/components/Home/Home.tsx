@@ -1,5 +1,5 @@
 import "./Home.css";
-import VerticalCarousel from "../../components/VerticalCarousel/VerticalCarousel";
+import VerticalCarousel from "../VerticalCarousel/VerticalCarousel";
 
 export function Home() {
   return (

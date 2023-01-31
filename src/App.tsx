@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { AboutUs } from './pages/AboutUs/AboutUs';
-import Testimonial from './pages/Testimonial/Testimonial';
-import {ContactUs} from './pages/ContactUs/ContactUs';
+import Testimonial from './components/Testimonial/Testimonial';
+import {ContactUs} from './components/ContactUs/ContactUs';
 import HomePage from './pages/HomePage/HomePage';
+import MentorPage from './pages/MentorPage/MentorPage';
 
 
 export function App() {
@@ -15,8 +15,9 @@ export function App() {
       </Route>
       <Route path="/contact" element={<ContactUs />} >
       </Route>
-      <Route path="/about" element={<AboutUs />} >
+      <Route path="/mentors" element={<MentorPage />} >
       </Route>
+
     </Routes>
   );
 }

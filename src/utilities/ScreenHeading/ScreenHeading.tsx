@@ -28,7 +28,6 @@ const ScreenHeading = (props: {
           </div>
         </div>
       </div>
-      {/* <UilArrowUp className="up__arrow" /> */}
     </div>
   );
 };

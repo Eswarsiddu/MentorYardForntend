@@ -1,7 +1,7 @@
-import {Home} from "../pages/Home/Home";
-import {AboutUs} from "../pages/AboutUs/AboutUs";
-import Testimonial from "../pages/Testimonial/Testimonial";
-import {ContactUs} from "../pages/ContactUs/ContactUs";
+import {Home} from "../components/Home/Home";
+import {AboutUs} from "../components/AboutUs/AboutUs";
+import Testimonial from "../components/Testimonial/Testimonial";
+import {ContactUs} from "../components/ContactUs/ContactUs";
 
 
 export const TOTAL_SCREENS = [

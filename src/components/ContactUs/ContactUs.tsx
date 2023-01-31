@@ -11,8 +11,6 @@ import Animations from "../../utilities/Animations";
 
 
 export const ContactUs = () => {
-
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
