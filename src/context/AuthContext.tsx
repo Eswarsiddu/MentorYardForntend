@@ -1,5 +1,6 @@
 import {
   createUserWithEmailAndPassword,
+  getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
@@ -13,8 +14,8 @@ import { auth } from "../utils/FireBaseConfig";
 
 const AuthContext = createContext<AuthContextInterface>({
   currentUser: undefined,
-  login: (email: string, password: string) => Promise.resolve(),
-  register: (email: string, password: string, fullName: string) =>
+  login: (email: string, password: string, type: string) => Promise.resolve(),
+  register: (email: string, password: string, fullName: string, type: string) =>
     Promise.resolve(),
   logout: () => Promise.resolve(),
   updateDisplayName: (fullName: string) => Promise.resolve(),
@@ -38,12 +39,17 @@ export default function AuthContextProvider({ children }: any) {
   }, []);
   const contextValue = {
     currentUser,
-    register: (email: string, password: string, fullName: string) =>
+    register: (
+      email: string,
+      password: string,
+      fullName: string,
+      type: string
+    ) =>
       createUserWithEmailAndPassword(auth, email, password).then((result) =>
         updateProfile(result.user, { displayName: fullName })
       ),
 
-    login: (email: string, password: string) =>
+    login: (email: string, password: string, type: string) =>
       signInWithEmailAndPassword(auth, email, password),
     updateDisplayName: (fullName: string) =>
       updateProfile(currentUser!, { displayName: fullName }),
