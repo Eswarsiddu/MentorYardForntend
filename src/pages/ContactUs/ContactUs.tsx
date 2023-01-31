@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Typical from 'react-typical';
-
 import { toast } from "react-toastify";
 import axios from "axios";
-
 import imgBack from "../../assets/Images/ContactUs/mailz2.jpeg";
 import load1 from "../../assets/Images/ContactUs/load2.gif";
 import './ContactUs.css'
-
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading.js";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 
 
 export const ContactUs = () => {
@@ -58,9 +58,6 @@ export const ContactUs = () => {
     }
   };
 
-
-
-
   return (
     <div> <div className="central-form" id="ContactMe">
     <div className="col">
@@ -72,14 +69,18 @@ export const ContactUs = () => {
           steps={[
             "Get In Touch 🤝",
             2200,
-            "Email Me And 📧",
+            "Email Us And 📧",
             2200,
             "Get Your Job Done! 👍🏻",
             2200,
           ]}
         />
       </h2>{" "}
-      <a href="https://www.facebook.com/vishalkrsoni">
+
+      
+   <div className="logo__icons">
+
+   <a href="https://www.facebook.com/vishalkrsoni">
         <i className="fa fa-facebook-square" />
       </a>
       <a href="https://myaccount.google.com/profile">
@@ -94,6 +95,7 @@ export const ContactUs = () => {
       <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
         <i className="fa fa-linkedin-square"></i>
       </a>
+   </div>
     </div>
     <div className="back-form">
       <div className="img-back">
@@ -109,7 +111,7 @@ export const ContactUs = () => {
         <input type="email" onChange={handleEmail} value={email} />
 
         <label htmlFor="message">Message</label>
-        <textarea type="text" onChange={handleMessage} value={message} />
+        <textarea  onChange={handleMessage} value={message} />
 
         <div className="send-btn">
           <button type="submit">

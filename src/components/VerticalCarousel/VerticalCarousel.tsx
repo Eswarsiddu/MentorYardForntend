@@ -20,7 +20,7 @@ function VerticalCarousel() {
       .add("two")
       .to(divs[0], { y: 300, x: 100, opacity: 1 }, "two")
       .to(divs[1], { y: 200, x: 0, opacity: 0.05 }, "two")
-      .to(divs[2], { y: -600, x: 0, opacity: 0.05 }, "two")
+      .to(divs[2], { y: -400, x: 0, opacity: 0.05 }, "two")
 
       .add("three")
       .to(divs[0], { y: 0, x: 0, opacity: 0.05 }, "three")
