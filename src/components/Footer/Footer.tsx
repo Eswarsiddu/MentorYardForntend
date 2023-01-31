@@ -4,7 +4,6 @@ function Footer() {
   return (
     <div className="footer__container">
       <div className="footer__icons">
-        icons here
         <div className="footer__icons__options">
           <a href="https://www.facebook.com/vishalkrsoni">
             <i className="fa fa-facebook-square" />
@@ -25,20 +24,35 @@ function Footer() {
       </div>
 
       <div className="footer__contact__info">
-        contact info :
         <div className="footer__contact__options">
           <div className="footer__contact number">
             <i className="uil uil-phone-volume contact__icon"></i>
-
+            <div className="numbers">
             <span> +91-7838516299</span>
+            <span> +91-9502766882</span>
+            </div>
+           
           </div>
           <div className="footer__contact email">
             <i className="uil uil-envelope-edit contact__icon"></i>
-            <span>vishal.sony1@gmail.com</span>
+           <div className="emails">
+           <span>vishal.sony1@gmail.com</span>
+            <span>siddueshu@gmail.com</span>
+
+           </div>
+            
+
           </div>
           <div className="footer__contact address">
             <i className="uil uil-map-marker-alt contact__icon"></i>
-            <span>Bangalore,India</span>
+
+            <div className="address__details">
+            <span>Indiranagar</span>
+            <span>Bangalore, India</span>
+            {/* <span>560038</span> */}
+
+
+            </div>
           </div>
         </div>
       </div>
