@@ -17,11 +17,20 @@
   color: bisque;
 }
 
+
+.footer__icons{
+  padding: 8px;
+
+}
 .footer__icons__options i{
+  margin-top: 12px;
   padding: 8px;
   color: aliceblue;
-  /* background-color: beige; */
 
+}
+.footer__icons__options i:hover{
+  color: aquamarine;
+  transform: scale(1.4);
 }
 
 .footer__contact__options{
