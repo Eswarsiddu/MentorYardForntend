@@ -17,15 +17,12 @@ import { Avatar } from "@mui/material";
 import Logo from "../../assets/Images/logoDesigns/svg/logo-no-background.svg";
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact", "LogIn", "Register"];
+const navItems = ["Home", "About Us", "Contact Us", "LogIn", "Register"];
 
 export default function NavBar(props: Props) {
   const { window } = props;

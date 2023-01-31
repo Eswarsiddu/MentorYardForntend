@@ -46,6 +46,7 @@ function Testimonial() {
             className="owl-carousel"
             id="testimonial-carousel"
             {...options}>
+              
             <div className="col-lg-12">
               <div className="testi-item">
                 <div className="testi-comment">
@@ -349,6 +350,8 @@ function Testimonial() {
                 </div>
               </div>
             </div>
+
+
           </OwlCarousel>
         </div>
       </div>

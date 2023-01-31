@@ -14,8 +14,7 @@ export function Home() {
           libero eum, perferendis quidem officia sapiente. Sapiente non
           excepturi dicta ipsa eos incidunt voluptates quibusdam, nemo
           consequatur provident dolor nostrum! Praesentium iure error neque sit
-          earum voluptatum sapiente, fugit, repellendus facere omnis fugiat,
-          maiores dolores? Illum, a minima! contents
+       
           </h4>
      
           <h2>Why Join MentorYard?</h2>
@@ -28,15 +27,12 @@ export function Home() {
           excepturi dicta ipsa eos incidunt voluptates quibusdam, nemo
           consequatur provident dolor nostrum! Praesentium iure error neque sit
           earum voluptatum sapiente, fugit, repellendus facere omnis fugiat,
-          maiores dolores? Illum, a minima! contents
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-          inventore consequuntur dolore dolores odit quae aut animi? Debitis
-          repellendus vero nobis facere asperiores nihil distinctio iste ea amet
+         
           </p>
 
         
         </div>
-        <div className="home__corousal">
+        <div className="home__carousel">
           <VerticalCarousel />
         </div>
       </div>
