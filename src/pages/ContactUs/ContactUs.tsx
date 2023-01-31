@@ -59,7 +59,10 @@ export const ContactUs = () => {
   };
 
   return (
-    <div> <div className="central-form" id="ContactMe">
+    <div> 
+       <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Us"} />
+      
+      <div className="central-form" id="ContactMe">
     <div className="col">
       <h2 className="title">
         {" "}

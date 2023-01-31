@@ -1,6 +1,6 @@
 .testimonial-section {
   padding: 80px 0 80px;
-  background-image: url("../../assets/Images//Testimonial/bg.jpeg");
+  /* background-image: url("../../assets/Images//Testimonial/bg.jpeg"); */
   background-position: center;
   background-attachment: fixed;
   width: 100%;
@@ -42,7 +42,7 @@
 }
 
 .testimonial-section .testi-item {
-  background-color: white;
+  background-color: rgba(247, 238, 238, 0.918);
   padding: 30px;
   border-radius: 50px 50px 50px 0px;
   margin: 8px;

@@ -8,6 +8,7 @@ import vivek from "../../assets/Images/Testimonial/AntMan.jpeg";
 import urvish from "../../assets/Images/Testimonial/BlackPanther.jpeg";
 import jangid from "../../assets/Images/Testimonial/DeadPool.jpeg";
 import ankit from "../../assets/Images/Testimonial/DoctorStrange.jpeg";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
 function Testimonial() {
   const options = {
@@ -34,8 +35,10 @@ function Testimonial() {
     },
   };
   return (
-    <div>
       <section className="testimonial-section">
+
+       <ScreenHeading subHeading={"What Our Mentees Say"} title={"Testimonials"} />
+
         <div className="container">
           <div className="row">
             <OwlCarousel
@@ -168,7 +171,6 @@ function Testimonial() {
                 </div>
               </div>
 
-             
               <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
@@ -228,7 +230,6 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
-
               
               <div className="col-lg-12">
                 <div className="testi-item">
@@ -295,7 +296,6 @@ function Testimonial() {
                   </div>
                 </div>
               </div>
-
           
               <div className="col-lg-12">
                 <div className="testi-item">
@@ -360,7 +360,6 @@ function Testimonial() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
