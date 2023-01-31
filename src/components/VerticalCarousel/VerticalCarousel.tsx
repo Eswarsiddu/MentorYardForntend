@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "./VerticalCarousel.css";
-import img1 from "../../assets/TestimonialImages/1.jpeg";
-import img2 from "../../assets/TestimonialImages/2.jpeg";
-import img3 from "../../assets/TestimonialImages/3.jpeg";
+import img1 from "../../assets/Images/MentorsSlider/1.jpeg";
+import img2 from "../../assets/Images/MentorsSlider/2.jpeg";
+import img3 from "../../assets/Images/MentorsSlider/3.jpeg";
 
 function VerticalCarousel() {
   useEffect(() => {
@@ -16,7 +16,7 @@ function VerticalCarousel() {
       .to(divs[0], { y: 600, x: 0, opacity: 0.05 }, "one")
       .to(divs[1], { y: -350, x: 10, opacity: 0.05 }, "one")
       .to(divs[2], { y: -450, x: 100, opacity: 1 }, "one")
-
+      
       .add("two")
       .to(divs[0], { y: 300, x: 100, opacity: 1 }, "two")
       .to(divs[1], { y: 200, x: 0, opacity: 0.05 }, "two")

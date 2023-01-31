@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Avatar } from "@mui/material";
-import Logo from "../../assets/logoDesigns/svg/logo-no-background.svg";
+import Logo from "../../assets/Images/logoDesigns/svg/logo-no-background.svg";
 
 interface Props {
   /**
