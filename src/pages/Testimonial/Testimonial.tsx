@@ -55,7 +55,7 @@ function Testimonial() {
                       self-sustainable ecosystem for our FMCG Start-Up. He is a
                       gem of a person. The recommendations coming out of
                       Vishal’s four-week study have allowed us to focus on
-                      problem areas and execute real-time changes, which
+                      problem areas and execute real-time 
                       
                       <i className="fa fa-quote-right" />
                     </p>
@@ -180,7 +180,7 @@ function Testimonial() {
                       deeply understands his work and gets things done
                       efficiently, thoroughly, and correctly in accordance with
                       best practices. Drawing from his vast experience, First
-                      and foremost, he defines reality and passion. The entire
+                      and foremost, he defines reality and passion.
                      
                       <i className="fa fa-quote-right" />
                     </p>

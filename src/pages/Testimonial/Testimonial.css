@@ -42,7 +42,7 @@
 }
 
 .testimonial-section .testi-item {
-  background-color: rgba(247, 238, 238, 0.918);
+  background-color: rgba(248, 237, 205, 0.918);
   padding: 30px;
   border-radius: 50px 50px 50px 0px;
   margin: 8px;
@@ -123,8 +123,8 @@
   margin: 0;
   margin-left: 10px;
 }
-/* 
+
 .testimonial-section .testi-item .testimonial-icon a {
   margin-right: 5px;
   color: tomato;
-} */
+}
