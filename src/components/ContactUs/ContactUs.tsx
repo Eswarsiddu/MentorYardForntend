@@ -57,78 +57,78 @@ export const ContactUs = () => {
   };
 
   return (
-    <div> 
-       <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Us"} />
-      
+    <div>
+      <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Us"} />
+
       <div className="central-form" id="ContactMe">
-    <div className="col">
-      <h2 className="title">
-        {" "}
-        <Typical
-          loop={Infinity}
-          wrapper="b"
-          steps={[
-            "Get In Touch 🤝",
-            2200,
-            "Email Us And 📧",
-            2200,
-            "Get Your Job Done! 👍🏻",
-            2200,
-          ]}
-        />
-      </h2>{" "}
+        <div className="col">
+          <h2 className="title">
+            {" "}
+            <Typical
+              loop={Infinity}
+              wrapper="b"
+              steps={[
+                "Get In Touch 🤝",
+                2200,
+                "Email Us And 📧",
+                2200,
+                "Get Your Job Done! 👍🏻",
+                2200,
+              ]}
+            />
+          </h2>{" "}
 
-      
-   <div className="logo__icons">
 
-   <a href="https://www.facebook.com/vishalkrsoni">
-        <i className="fa fa-facebook-square" />
-      </a>
-      <a href="https://myaccount.google.com/profile">
-        <i className="fa fa-google-plus-square" />
-      </a>
-      <a href="https://www.instagram.com/vishalkrsoni/">
-        <i className="fa fa-instagram" />
-      </a>
-      <a href="https://github.com/vishalkrsoni">
-        <i className="fa fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
-        <i className="fa fa-linkedin-square"></i>
-      </a>
-   </div>
-    </div>
-    <div className="back-form">
-      <div className="img-back">
-        <h4>Send Your Email Here!</h4>
-        <img src={imgBack} alt="image not found" />
-      </div>
-      <form onSubmit={submitForm}>
-        <p>{banner}</p>
-        <label htmlFor="name">Name</label>
-        <input type="text" onChange={handleName} value={name} />
+          <div className="logo__icons">
 
-        <label htmlFor="email">Email</label>
-        <input type="email" onChange={handleEmail} value={email} />
-
-        <label htmlFor="message">Message</label>
-        <textarea  onChange={handleMessage} value={message} />
-
-        <div className="send-btn">
-          <button type="submit">
-            send
-            <i className="fa fa-paper-plane" />
-            {bool ? (
-              <b className="load">
-                <img src={load1} alt="image not responding" />
-              </b>
-            ) : (
-              ""
-            )}
-          </button>
+            <a href="https://www.facebook.com/vishalkrsoni">
+              <i className="fa fa-facebook-square" />
+            </a>
+            <a href="https://myaccount.google.com/profile">
+              <i className="fa fa-google-plus-square" />
+            </a>
+            <a href="https://www.instagram.com/vishalkrsoni/">
+              <i className="fa fa-instagram" />
+            </a>
+            <a href="https://github.com/vishalkrsoni">
+              <i className="fa fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+              <i className="fa fa-linkedin-square"></i>
+            </a>
+          </div>
         </div>
-      </form>
-    </div>
-  </div></div>
+        <div className="back-form">
+          <div className="img-back">
+            <h4>Send Your Email Here!</h4>
+            <img src={imgBack} alt="image not found" />
+          </div>
+          <form onSubmit={submitForm}>
+            <p>{banner}</p>
+            <label htmlFor="name">Name</label>
+            <input type="text" onChange={handleName} value={name} />
+
+            <label htmlFor="email">Email</label>
+            <input type="email" onChange={handleEmail} value={email} />
+
+            <label htmlFor="message">Message</label>
+            <textarea onChange={handleMessage} value={message} />
+
+            <div className="send-btn">
+              <button type="submit">
+                send
+                <i className="fa fa-paper-plane" />
+                {bool ? (
+                  <b className="load">
+                    <img src={load1} alt="image not responding" />
+                  </b>
+                ) : (
+                  ""
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div></div>
   )
 }

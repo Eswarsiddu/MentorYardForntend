@@ -7,7 +7,7 @@ export default class ScrollService {
   static currentScreenBroadcaster = new Subject();
   static currentScreenFadeIn = new Subject();
 
-  constructor() {
+  constructor () {
     window.addEventListener("scroll", this.checkCurrentScreenUnderViewPort);
   }
 
@@ -26,10 +26,10 @@ export default class ScrollService {
 
 
 
-  isElementInView = (elem, type) => {
+  isElementInView = (elem: HTMLElement, type: string) => {
     let rec = elem.getBoundingClientRect();
     let elementTop = rec.top;
-    let elementBottom = rec.Bottom;
+    let elementBottom = rec.bottom;
 
     let partiallyVisible =
       elementTop < window.innerHeight && elementBottom >= 0;
@@ -48,7 +48,7 @@ export default class ScrollService {
     }
   };
 
-  checkCurrentScreenUnderViewPort = (event) => {
+  checkCurrentScreenUnderViewPort = (event: {}) => {
     if (!event || Object.keys(event).length < 1) return;
     for (let screen of TOTAL_SCREENS) {
       let screenFromDom = document.getElementById(screen.screen_name);
@@ -57,13 +57,13 @@ export default class ScrollService {
       let fullyVisible = this.isElementInView(screenFromDom, "complete");
       let partiallyVisible = this.isElementInView(screenFromDom, "partial");
       if (fullyVisible || partiallyVisible) {
-        if (partiallyVisible && !screen.alreadyRendered) {
-          ScrollService.currentScreenFadeIn.next({
-            fadeInScreen: screen.screen_name,
-          });
-          screen["alreadyRendered"] = true;
-          break;
-        }
+        // if (partiallyVisible && !screen.alreadyRendered) {
+        //   ScrollService.currentScreenFadeIn.next({
+        //     fadeInScreen: screen.screen_name,
+        //   });
+        //   screen["alreadyRendered"] = true;
+        //   break;
+        // }
         if (fullyVisible) {
           ScrollService.currentScreenBroadcaster.next({
             screenInView: screen.screen_name,

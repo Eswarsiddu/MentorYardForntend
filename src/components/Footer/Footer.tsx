@@ -28,28 +28,28 @@ function Footer() {
           <div className="footer__contact number">
             <i className="uil uil-phone-volume contact__icon"></i>
             <div className="numbers">
-            <span> +91-7838516299</span>
-            <span> +91-9502766882</span>
+              <span> +91-7838516299</span>
+              <span> +91-9502766882</span>
             </div>
-           
+
           </div>
           <div className="footer__contact email">
             <i className="uil uil-envelope-edit contact__icon"></i>
-           <div className="emails">
-           <span>vishal.sony1@gmail.com</span>
-            <span>siddueshu@gmail.com</span>
+            <div className="emails">
+              <span>vishal.sony1@gmail.com</span>
+              <span>siddueshu@gmail.com</span>
 
-           </div>
-            
+            </div>
+
 
           </div>
           <div className="footer__contact address">
             <i className="uil uil-map-marker-alt contact__icon"></i>
 
             <div className="address__details">
-            <span>Indiranagar</span>
-            <span>Bangalore, India</span>
-            {/* <span>560038</span> */}
+              <span>Indiranagar</span>
+              <span>Bangalore, India</span>
+              {/* <span>560038</span> */}
 
 
             </div>

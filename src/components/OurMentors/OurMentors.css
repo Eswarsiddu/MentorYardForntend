@@ -1,0 +1,14 @@
+.mentors__display__gallery {
+ background-color: blanchedalmond;
+}
+.mentors__container {
+  padding: 22px;
+  margin-top: 300px;
+  /* background-color: aqua; */
+}
+
+img{
+  padding: 6px;
+  margin: 6px;
+  padding-bottom: 8px;
+}

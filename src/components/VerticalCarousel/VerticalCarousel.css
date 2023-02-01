@@ -1,7 +1,7 @@
 .slider__image {
   width: 180px;
   height: 180px;
-  object-fit:cover;
+  object-fit: cover;
   border-radius: 50%;
   background-color: rgb(224, 40, 40);
   flex: 0.5;
@@ -26,6 +26,6 @@
 .slider__text {
   flex: 0.5;
 }
-.slider__pic{
-  /* background-color: #fff; */
+.slider__pic {
+  background-color: #fff;
 }

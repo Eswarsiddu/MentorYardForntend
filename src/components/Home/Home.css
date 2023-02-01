@@ -12,18 +12,15 @@ h2 {
   padding-top: 20px;
 }
 
-.home__contents{
+.home__contents {
   /* background-color: rgb(223, 212, 212); */
   padding: 14px;
   margin: 12px 6px;
-
 }
 
-
-.home__carousel{
+.home__carousel {
   margin: 12px;
   padding: 14px;
   /* background-color: rgb(104, 97, 97); */
- max-height: 700px;
-
+  max-height: 700px;
 }

@@ -40,13 +40,14 @@ function Testimonial() {
         subHeading={"What Our Mentees Say About Us"}
         title={"Testimonials"}
       />
+
       <div className="container">
         <div className="row">
           <OwlCarousel
             className="owl-carousel"
             id="testimonial-carousel"
             {...options}>
-              
+
             <div className="col-lg-12">
               <div className="testi-item">
                 <div className="testi-comment">
