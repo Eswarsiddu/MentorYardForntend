@@ -14,18 +14,31 @@
 }
 
 .slider__content {
-  width: 600px;
+  width: 650px;
   min-height: fit-content;
   background-color: rgb(209, 204, 204);
   display: flex;
   align-items: center;
   padding: 12px;
+  border-radius: 8px;
 
   justify-content: space-around;
 }
 .slider__text {
   flex: 0.5;
 }
-.slider__pic {
-  background-color: #fff;
+
+.slider__text__name {
+  color: tomato;
+  font-size: 28px;
+}
+
+.slider__text__occupation {
+  color: rgb(22, 8, 155);
+  font-size: 20px;
+}
+
+.slider__text__description {
+  /* color: rgb(22, 8, 155); */
+  font-size: 14px;
 }

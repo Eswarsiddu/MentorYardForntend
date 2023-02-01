@@ -13,20 +13,23 @@ export default function OurMentors() {
 
       <div className="mentors__display__gallery">
         <ImageList
-          sx={{  height: 510, padding: "16px", margin: "16px" }}
-          cols={8}
-          rowHeight={160}>
+
+          sx={{ padding: "20px", margin: "20px" }}
+          cols={5}
+        >
           {mentorsData.map((mentor) => (
-            <ImageListItem key={mentor.img}>
+            <ImageListItem key={mentor.img} className="mentor__images">
               <img
                 src={`${mentor.img}?w=164&h=164&fit=crop&auto=format`}
                 srcSet={`${mentor.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 alt={mentor.title}
                 loading="lazy"
+                className="mentor__image__box"
               />
             </ImageListItem>
           ))}
         </ImageList>
+
       </div>
     </div>
   );

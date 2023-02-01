@@ -48,67 +48,7 @@ function Testimonial() {
             id="testimonial-carousel"
             {...options}>
 
-            <div className="col-lg-12">
-              <div className="testi-item">
-                <div className="testi-comment">
-                  <p>
-                    <i className="fa fa-quote-left" />
-                    I have worked neck-to-neck with Vishal and build a
-                    self-sustainable ecosystem for our FMCG Start-Up. He is a
-                    gem of a person. The recommendations coming out of Vishal’s
-                    four-week study have allowed us to focus on problem areas
-                    and execute real-time
-                    <i className="fa fa-quote-right" />
-                  </p>
-                  <ul className="stars list-unstyled">
-                    <li>
-                      <i className="fa fa-star" />
-                    </li>
-                    <li>
-                      <i className="fa fa-star" />
-                    </li>
-                    <li>
-                      <i className="fa fa-star" />
-                    </li>
-                    <li>
-                      <i className="fa fa-star-half-alt" />
-                    </li>
-                    <li>
-                      <i className="fa fa-star" />
-                    </li>
-                  </ul>
-                </div>
 
-                <div className="client-info">
-                  <img src={abhishekBhaiya} alt="no internet connection"></img>
-                  <h5>Bat Man </h5>
-                  <p>
-                    Gotham City <small> Protector</small>
-                  </p>
-
-                  <div className="testimonial-icon">
-                    <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
-                      <i
-                        className="fa fa-linkedin-square"
-                        style={{
-                          color: "rgba(10,102,194)",
-                          background: "white",
-                        }}></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
-                      <i
-                        className="fa fa-instagram"
-                        style={{
-                          color: "#f55317fc",
-                        }}></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
-                      <i className="fa fa-facebook-square"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div className="col-lg-12">
               <div className="testi-item">

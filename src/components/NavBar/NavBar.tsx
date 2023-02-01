@@ -53,6 +53,9 @@ export default function NavBar(props: Props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+
+
+    
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />

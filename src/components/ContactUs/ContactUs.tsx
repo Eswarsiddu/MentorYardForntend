@@ -101,7 +101,7 @@ export const ContactUs = () => {
         <div className="back-form">
           <div className="img-back">
             <h4>Send Your Email Here!</h4>
-            <img src={imgBack} alt="image not found" />
+            <img src={imgBack} alt="image not found" className="contact__bg__image" />
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>

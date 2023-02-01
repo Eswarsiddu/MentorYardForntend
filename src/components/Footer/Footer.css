@@ -1,5 +1,5 @@
 .footer__container {
-  background-color: rgb(80, 145, 241);
+  background-color: rgb(65, 67, 69);
   width: 100%;
   height: 180px;
   display: flex;
@@ -26,8 +26,8 @@
 }
 
 .footer__navigate__options {
-  font-size: 14px;
-  color: bisque;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
 }
 .contact__icon {
   font-size: 24px;
@@ -58,7 +58,9 @@
 
 .footer__contact__options {
   font-size: 14px;
-  color: bisque;
+  color: rgb(255, 255, 255);
+
+  /* color: bisque; */
   display: flex;
   flex-direction: column;
   gap: 8px;
