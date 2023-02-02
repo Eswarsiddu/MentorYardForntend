@@ -21,8 +21,8 @@
   align-items: center;
   padding: 12px;
   border-radius: 8px;
-
   justify-content: space-around;
+  z-index: 1;
 }
 .slider__text {
   flex: 0.5;
