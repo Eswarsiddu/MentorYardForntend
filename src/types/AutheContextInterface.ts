@@ -1,16 +1,13 @@
 import { User, UserCredential } from "firebase/auth";
 export interface AuthContextInterface {
   currentUser: User | null | undefined;
-  login: (
-    email: string,
-    password: string,
-    type: string
-  ) => Promise<UserCredential | void>;
+  role: string | null;
+  login: (email: string, password: string) => Promise<UserCredential | void>;
   register: (
     email: string,
     password: string,
     fullName: string,
-    type: string
+    _role: string
   ) => Promise<UserCredential | void>;
   logout: () => Promise<void>;
   updateDisplayName: (fullName: string) => Promise<void>;
