@@ -11,7 +11,7 @@ function VerticalCarousel() {
     gsap.set(divs[1], { x: 100, opacity: 1 });
 
     gsap
-      .timeline({ repeat: -1, defaults: { duration: 2 } })
+      .timeline({ repeat: -1, defaults: { duration: 2.2 } })
       .add("one")
       .to(divs[0], { y: 450, x: 0, opacity: 0.05 }, "one")
       .to(divs[1], { y: -350, x: 10, opacity: 0.05 }, "one")
@@ -36,8 +36,8 @@ function VerticalCarousel() {
             <img src={img1} alt="Person" className="slider__image" />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Shahrukh khan</h2>
-            <h3 className="slider__text__occupation">Co-Founder </h3>
+            <h2 className="slider__text__name">Vishal Soni</h2>
+            <h3 className="slider__text__occupation">Co-Founder & CTO</h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
@@ -52,12 +52,13 @@ function VerticalCarousel() {
             <img src={img2} alt="Person" className="slider__image" />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Salman Khan</h2>
-            <h3 className="slider__text__occupation">C.T.O </h3>
+            <h2 className="slider__text__name">Irfan Ansari</h2>
+            <h3 className="slider__text__occupation">Tech Lead </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
               repudiandae iure animi debitis aliquid vero quibusdam
+              
             </p>
           </div>
         </div>
@@ -68,7 +69,7 @@ function VerticalCarousel() {
             <img src={img3} alt="Person" className="slider__image" />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Ranvir Kapoor</h2>
+            <h2 className="slider__text__name">Vivek Regmi</h2>
             <h3 className="slider__text__occupation">Founder & CEO </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci

@@ -3,7 +3,6 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Testimonial.css";
-import abhishekBhaiya from "../../assets/Images/Testimonial/BatMan.jpeg";
 import vivek from "../../assets/Images/Testimonial/AntMan.jpeg";
 import urvish from "../../assets/Images/Testimonial/BlackPanther.jpeg";
 import jangid from "../../assets/Images/Testimonial/DeadPool.jpeg";
@@ -47,8 +46,6 @@ function Testimonial() {
             className="owl-carousel"
             id="testimonial-carousel"
             {...options}>
-
-
 
             <div className="col-lg-12">
               <div className="testi-item">
@@ -292,12 +289,11 @@ function Testimonial() {
               </div>
             </div>
 
-
           </OwlCarousel>
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default Testimonial;

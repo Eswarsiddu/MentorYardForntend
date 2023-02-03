@@ -31,7 +31,8 @@
   color: rgb(255, 255, 255);
 }
 .contact__icon {
-  font-size: 24px;
+  font-size: 26px;
+  color: tomato;
 }
 
 .footer__contact {
@@ -40,20 +41,26 @@
 }
 
 .tab:hover {
-  color: aquamarine;
+  color: rgb(228, 98, 75);
   transform: scale(1.1);
 }
 
-.footer__icons {
-  padding: 8px;
+
+.context {
+  /* padding: 12px; */
+  margin-left: 24px;
+  font-size: 22px;
 }
 .footer__icons__options i {
   margin-top: 12px;
   padding: 8px;
-  color: aliceblue;
+  color: rgb(194, 211, 226);
+  font-size: 36px;
 }
 .footer__icons__options i:hover {
-  color: aquamarine;
+  /* color: aquamarine; */
+  color: rgb(228, 98, 75);
+
   transform: scale(1.4);
 }
 
@@ -66,3 +73,4 @@
   flex-direction: column;
   gap: 8px;
 }
+

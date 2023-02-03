@@ -4,6 +4,8 @@ function Footer() {
   return (
     <div className="footer__container">
       <div className="footer__icons">
+        
+        <div className="context">Connect With Us</div>
         <div className="footer__icons__options">
           <a href="https://www.facebook.com/vishalkrsoni">
             <i className="fa fa-facebook-square" />
