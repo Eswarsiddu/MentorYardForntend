@@ -44,3 +44,44 @@ export const CheckRole = async (uid: string, role: string) => {
   if (res.status == 200) return true;
   return false;
 };
+
+export const HasBio = async (uid: string, role: string) => {
+  console.log("sending role", role);
+  const res = await fetch(
+    BACKEND_HTTP_URL + "/hasbio" + "/" + uid + "?role=" + role
+  );
+  if (res.status == 200) {
+    return true;
+  }
+  return false;
+};
+
+export const GetBio = async (uid: string, role: string) => {
+  const res = await fetch(
+    BACKEND_HTTP_URL + "/getbio" + "/" + uid + "?role=" + role
+  );
+  if (res.status == 200) {
+    return await res.json();
+  }
+  return undefined;
+};
+
+export const SubmitBio = async (
+  uid: string,
+  role: string,
+  formData: FormData
+) => {
+  console.log("line1", formData.get("line1") as string);
+  const res = await fetch(
+    BACKEND_HTTP_URL + "/createbio" + "/" + uid + "?role=" + role,
+    {
+      method: "POST",
+      body: new URLSearchParams(formData),
+    }
+  );
+  if (res.status == 200) {
+    return "";
+  } else {
+    return (await res.json()).msg;
+  }
+};

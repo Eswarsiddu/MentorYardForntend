@@ -1,67 +1,43 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import ROLES from "../../types/RolesEnum";
-import { CheckRole } from "../../utils/BackEndRequests";
 export function Login() {
-  const { login, currentUser, logout } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const { login, logout, role } = useAuth();
   const navigate = useNavigate();
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [role, setRole] = useState("");
-  useEffect(() => {
-    console.log("logged in", loggedIn);
-    if (!loggedIn) return;
-    console.log("current user", currentUser?.displayName, currentUser?.uid);
-    if (currentUser) {
-      // const validRole = await CheckRole(currentUser.uid, role);
-      CheckRole(currentUser.uid, role).then((validRole) => {
-        console.log({ validRole });
-        if (validRole) {
-          navigate("/dashboard");
-        } else {
-          logout().then(() => {
-            setLoggedIn(false);
-          });
-        }
-      });
-      // console.log({ validRole });
-    }
-  }, [loggedIn]);
   return (
     <form
       onSubmit={async (e) => {
         e.preventDefault();
+        setLoading(true);
         const formData = new FormData(e.target as HTMLFormElement);
         const _role = formData.get("role") as string;
-        setRole(_role);
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
+        // setError("test error");
+        // setLoading(false);
+        // return;
         try {
           console.log("loggin in");
-          await login(email, password);
-          console.log("login setted to true");
-          setLoggedIn(true);
-          // console.log(
-          //   "current user",
-          //   currentUser?.displayName,
-          //   currentUser?.uid
-          // );
-          // if (currentUser) {
-          //   const validRole = await CheckRole(currentUser.uid, role);
-          //   console.log({ validRole });
-          //   if (validRole) {
-          //     navigate("/dashboard");
-          //   } else {
-          //     await logout();
-          //     console.log("roles doen't match");
-          //   }
-          // }
+          const loginStatus = await login(email, password, _role); // Firebase Authentication
+          // setError("roles doen't match");
+          return;
+          if (loginStatus) {
+            navigate("/dashboard");
+          } else {
+            console.log("roles doen't match");
+            setError("roles doen't match");
+            setLoading(false);
+          }
         } catch (e) {
           console.log("error", e);
         }
       }}
     >
       <div>
+        <Link to="/signup">create account</Link>
         <div>
           <input
             type="radio"
@@ -79,13 +55,16 @@ export function Login() {
       </div>
       <div>
         <label>Email</label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" required autoFocus />
       </div>
       <div>
         <label>Password</label>
         <input type="password" name="password" required />
       </div>
-      <button type="submit">Login</button>
+      {(error != "" || typeof role == "undefined") && (
+        <p>"Roles didn't match</p>
+      )}
+      <button type="submit">{loading ? "Loading" : "Login"}</button>
     </form>
   );
 }

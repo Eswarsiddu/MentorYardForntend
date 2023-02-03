@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import ROLES from "../../types/RolesEnum";
 import { CreateUser } from "../../utils/BackEndRequests";
 import { checkPasswordContraints } from "../../utils/Contants";
+import { auth } from "../../utils/FireBaseConfig";
 
 export default function SignUp() {
   const { register, currentUser } = useAuth();
@@ -18,29 +19,30 @@ export default function SignUp() {
     role: ROLES.MENTEE,
   });
 
-  useEffect(() => {
-    if (currentUser) {
-      CreateUser(
-        inputData.email,
-        inputData.name,
-        inputData.role,
-        currentUser!.uid
-      ).then((res) => {
-        if (res.status != 200) {
-          setEmailError(false);
-          setCommonError(
-            res.status == 400
-              ? "No User Found with this email id"
-              : "Internal Server Error, Plese trye after some time"
-          );
-          setLoading(false);
-          return;
-        }
-        console.log("user created");
-        navigate("/dashboard");
-      });
-    }
-  }, [signedUp]);
+  // useEffect(() => {
+  //   console.log("signed up", currentUser?.uid, inputData);
+  //   if (currentUser) {
+  //     CreateUser(
+  //       inputData.email,
+  //       inputData.name,
+  //       inputData.role,
+  //       currentUser!.uid
+  //     ).then((res) => {
+  //       if (res.status != 200) {
+  //         setEmailError(false);
+  //         setCommonError(
+  //           res.status == 400
+  //             ? "No User Found with this email id"
+  //             : "Internal Server Error, Plese trye after some time"
+  //         );
+  //         setLoading(false);
+  //         return;
+  //       }
+  //       console.log("user created");
+  //       navigate("/dashboard");
+  //     });
+  //   }
+  // }, [signedUp]);
 
   return (
     <form
@@ -63,8 +65,10 @@ export default function SignUp() {
         }
         try {
           await register(email, password, name, role);
-          setInputData({ name, email, role });
-          setSignedUp(true);
+          // console.log("uid", auth.currentUser?.uid);
+
+          // setInputData({ name, email, role });
+          // setSignedUp(true);
         } catch (e: any) {
           setLoading(false);
           setEmailError(false);
@@ -77,6 +81,7 @@ export default function SignUp() {
       }}
     >
       <div>
+        <Link to="/login">Login</Link>
         <div>
           <input
             type="radio"

@@ -10,13 +10,13 @@ import {
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContextInterface } from "../types/AutheContextInterface";
-import { GetRole } from "../utils/BackEndRequests";
+import { CreateUser, GetRole } from "../utils/BackEndRequests";
 import { auth } from "../utils/FireBaseConfig";
 
 const AuthContext = createContext<AuthContextInterface>({
   currentUser: undefined,
   role: null,
-  login: (email: string, password: string) => Promise.resolve(),
+  login: (email: string, password: string, _role: string) => Promise.resolve(),
   register: (
     email: string,
     password: string,
@@ -34,16 +34,15 @@ export default function AuthContextProvider({ children }: any) {
   const [currentUser, setCurrentUser] = useState<User | null | undefined>(
     undefined
   );
-  const [role, setRole] = useState<string | null>(null);
+  const [role, setRole] = useState<string | null | undefined>(null);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      setCurrentUser(user);
-      const gettingRole = await GetRole(user?.uid as string);
-      console.log("getting role", gettingRole);
-      if (user && !role) {
+      if (user) {
+        const gettingRole = await GetRole(user.uid);
+        console.log("getting role", gettingRole);
         setRole(gettingRole);
       }
-      console.log("setting current user");
+      setCurrentUser(user);
     });
     return () => {
       unsubscribe();
@@ -58,13 +57,28 @@ export default function AuthContextProvider({ children }: any) {
       fullName: string,
       _role: string
     ) =>
-      createUserWithEmailAndPassword(auth, email, password).then((result) => {
-        console.log("registred", { email, password, fullName });
-        setRole(_role);
-        return updateProfile(result.user, { displayName: fullName });
-      }),
-    login: (email: string, password: string) =>
-      signInWithEmailAndPassword(auth, email, password),
+      createUserWithEmailAndPassword(auth, email, password).then(
+        async (result) => {
+          await CreateUser(email, fullName, _role, auth.currentUser!.uid);
+          setRole(_role);
+          return updateProfile(result.user, { displayName: fullName });
+        }
+      ),
+    login: (email: string, password: string, _role: string) => {
+      return signInWithEmailAndPassword(auth, email, password).then(
+        async () => {
+          const uid = auth.currentUser!.uid;
+          const gettingRole = await GetRole(uid);
+          if (gettingRole != _role) {
+            await signOut(auth);
+            setRole(undefined);
+            return false;
+          }
+          setRole(gettingRole);
+          return true;
+        }
+      );
+    },
     updateDisplayName: (fullName: string) =>
       updateProfile(currentUser!, { displayName: fullName }),
     updateEmailAddress: (email: string) => updateEmail(currentUser!, email),
