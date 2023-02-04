@@ -61,7 +61,9 @@ export const GetBio = async (uid: string, role: string) => {
     BACKEND_HTTP_URL + "/getbio" + "/" + uid + "?role=" + role
   );
   if (res.status == 200) {
-    return await res.json();
+    const data = await res.json();
+    console.log("getBio data", data);
+    return data;
   }
   return undefined;
 };

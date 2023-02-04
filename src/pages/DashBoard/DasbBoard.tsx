@@ -11,6 +11,7 @@ export default function DashBoard() {
   useEffect(() => {
     GetBio(currentUser!.uid, role!).then((data) => {
       if (data) {
+        console.log("data", data);
         if (data.address) {
           setLoading(false);
         } else {
@@ -19,6 +20,7 @@ export default function DashBoard() {
         }
       } else {
         console.log("error");
+        navigate("/createbio");
       }
     });
     // HasBio(currentUser!.uid, role!).then((hasBio) => {

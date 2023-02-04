@@ -32,7 +32,9 @@ export function Login() {
             setLoading(false);
           }
         } catch (e) {
+          setLoading(false);
           console.log("error", e);
+          setError(e.code as string);
         }
       }}
     >
@@ -62,7 +64,7 @@ export function Login() {
         <input type="password" name="password" required />
       </div>
       {(error != "" || typeof role == "undefined") && (
-        <p>"Roles didn't match</p>
+        <p>{error ? error : "Roles didn't match"}</p>
       )}
       <button type="submit">{loading ? "Loading" : "Login"}</button>
     </form>
