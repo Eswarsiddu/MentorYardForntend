@@ -1,10 +1,7 @@
 import './Header.css'
 import React from 'react'
-import companyLogo from '../../assets/Images/logoDesigns/pngLogo.png'
-// import companyLogo1 from '../../assets/Images/logoDesigns/'
-// import companyLogo2 from '../../assets/Images/logoDesigns/svg/mentorLogo.svg'
-
-
+// import companyLogo from '../../assets/Images/logoDesigns/pngLogo.png'
+import companyLogo from '../../assets/Images/logoDesigns/finalLogo.svg'
 
 
 function Header() {

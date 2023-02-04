@@ -7,10 +7,10 @@ import { useState } from "react";
 export default function CreateBio() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-//   const { currentUser, logout, role } = useAuth();
-// for developing ui use temporary variables
-const ROLES = {MENTOR:"metnor",MENTEE:"mentee"};
-const role = ROLES.MENTOR;
+  //   const { currentUser, logout, role } = useAuth();
+  // for developing ui use temporary variables
+  const ROLES = { MENTOR: "metnor", MENTEE: "mentee" };
+  const role = ROLES.MENTOR;
   const navigate = useNavigate();
   return (
     <div>
@@ -21,20 +21,20 @@ const role = ROLES.MENTOR;
           setLoading(true);
 
           // to show errors like, inavlid credentials, wrong Password
-          setTimeout(()=>{
+          setTimeout(() => {
             setError("some error");
             setLoading(false);
-          },2000);
-        //   const fromData = new FormData(e.target as HTMLFormElement);
-        //   const res = await SubmitBio(currentUser!.uid, role!, fromData);
-        //   if (res == "") {
-        //     navigate("/dashboard");
-        //   } else {
-        //     setError(res);
-        //     setLoading(false);
-        //   }
-        // }
-    }
+          }, 2000);
+          //   const fromData = new FormData(e.target as HTMLFormElement);
+          //   const res = await SubmitBio(currentUser!.uid, role!, fromData);
+          //   if (res == "") {
+          //     navigate("/dashboard");
+          //   } else {
+          //     setError(res);
+          //     setLoading(false);
+          //   }
+          // }
+        }
       >
         <div>
           <label>Phone Number</label>
