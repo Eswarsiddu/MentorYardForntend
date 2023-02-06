@@ -1,0 +1,14 @@
+.mentors__container {
+  margin-top: 190px;
+  padding: 12px;
+}
+
+.mentor__image__box:hover {
+  transform: scale(1.02) rotateY(180deg);
+  background-image: none;
+}
+
+.mentor__images {
+  display: flex;
+  gap: 18px;
+}
