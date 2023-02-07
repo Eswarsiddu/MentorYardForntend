@@ -1,46 +1,60 @@
-import { Link, useNavigate } from "react-router-dom";
-// import ROLES from "../../types/RolesEnum";
-// import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import ROLES from "../../types/RolesEnum";
+import { useAuth } from "../../context/AuthContext";
 import "./CreateBio.css";
-// import { SubmitBio } from "../../utils/BackEndRequests";
+import { SubmitBio } from "../../utils/BackEndRequests";
 import { useState } from "react";
 export default function CreateBio() {
+  console.log("history state", history.state);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  //   const { currentUser, logout, role } = useAuth();
-  // for developing ui use temporary variables
-  const ROLES = { MENTOR: "metnor", MENTEE: "mentee" };
-  const role = ROLES.MENTOR;
+  const { currentUser, role } = useAuth();
+  const [profileImage, setProfileImage] = useState<File>();
   const navigate = useNavigate();
   return (
-    <div>
-      create bio
+    <>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
           setLoading(true);
+          const fromData = new FormData(e.target as HTMLFormElement);
+          const pictureForm = new FormData();
+          pictureForm.append("file", profileImage as Blob);
+          pictureForm.append("upload_preset", "mentoryard");
+          pictureForm.append("cloud_name", "dp7zrbtac");
 
-          // to show errors like, inavlid credentials, wrong Password
-          setTimeout(() => {
-            setError("some error");
+          const picRes = await fetch(
+            "https://api.cloudinary.com/v1_1/dp7zrbtac/upload",
+            {
+              method: "POST",
+              body: pictureForm,
+            }
+          );
+          const picResData = await picRes.json();
+          console.log("pic res:", picResData);
+
+          fromData.append("profilePic", picResData.secure_url);
+
+          const res = await SubmitBio(currentUser!.uid, role!, fromData);
+          if (res == "") {
+            navigate("/dashboard");
+          } else {
+            setError(res);
             setLoading(false);
-          }, 2000);
-          //   const fromData = new FormData(e.target as HTMLFormElement);
-          //   const res = await SubmitBio(currentUser!.uid, role!, fromData);
-          //   if (res == "") {
-          //     navigate("/dashboard");
-          //   } else {
-          //     setError(res);
-          //     setLoading(false);
-          //   }
-          // }
-        }
+          }
+        }}
       >
+        <input
+          type="file"
+          onChange={(e) => {
+            setProfileImage(e.target.files[0]);
+          }}
+        />
         <div>
           <label>Phone Number</label>
           <input type="tel" name="phoneNumber" required />
         </div>
-        <h2>Address</h2>
+        <p>Address</p>
         <div>
           <label>line 1</label>
           <input type="text" name="line1" required />
@@ -83,6 +97,6 @@ export default function CreateBio() {
         {error && <p>{error}</p>}
         <button type="submit">{loading ? "loading" : "submit"}</button>
       </form>
-    </div>
+    </>
   );
 }

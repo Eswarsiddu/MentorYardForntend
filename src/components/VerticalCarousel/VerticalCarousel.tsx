@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import "./VerticalCarousel.css";
-import img1 from "../../assets/Images/MentorsSlider/1.jpeg";
-import img2 from "../../assets/Images/MentorsSlider/2.jpeg";
-import img3 from "../../assets/Images/MentorsSlider/3.jpeg";
 
 function VerticalCarousel() {
   useEffect(() => {
@@ -16,7 +13,7 @@ function VerticalCarousel() {
       .to(divs[0], { y: 450, x: 0, opacity: 0.05 }, "one")
       .to(divs[1], { y: -350, x: 10, opacity: 0.05 }, "one")
       .to(divs[2], { y: -400, x: 70, opacity: 1 }, "one")
-      
+
       .add("two")
       .to(divs[0], { y: 300, x: 70, opacity: 1 }, "two")
       .to(divs[1], { y: 200, x: 0, opacity: 0.05 }, "two")
@@ -33,7 +30,11 @@ function VerticalCarousel() {
       <div className="slider__box">
         <div className="slider__content">
           <div className="slider__pic">
-            <img src={img1} alt="Person" className="slider__image" />
+            <img
+              src="/Images/MentorsSlider/1.jpeg"
+              alt="Person"
+              className="slider__image"
+            />
           </div>
           <div className="slider__text">
             <h2 className="slider__text__name">Vishal Soni</h2>
@@ -49,16 +50,19 @@ function VerticalCarousel() {
       <div className="slider__box">
         <div className="slider__content">
           <div className="slider__pic">
-            <img src={img2} alt="Person" className="slider__image" />
+            <img
+              src="/Images/MentorsSlider/4.jpg"
+              alt="Person"
+              className="slider__image"
+            />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Irfan Ansari</h2>
-            <h3 className="slider__text__occupation">Tech Lead </h3>
+            <h2 className="slider__text__name">Siddu Eswar</h2>
+            <h3 className="slider__text__occupation">Co-Founder & CTO</h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
               repudiandae iure animi debitis aliquid vero quibusdam
-              
             </p>
           </div>
         </div>
@@ -66,11 +70,15 @@ function VerticalCarousel() {
       <div className="slider__box">
         <div className="slider__content">
           <div className="slider__pic">
-            <img src={img3} alt="Person" className="slider__image" />
+            <img
+              src="/Images/MentorsSlider/2.jpeg"
+              alt="Person"
+              className="slider__image"
+            />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Vivek Regmi</h2>
-            <h3 className="slider__text__occupation">Founder & CEO </h3>
+            <h2 className="slider__text__name">Irfan Ansari</h2>
+            <h3 className="slider__text__occupation">Tech Lead </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum

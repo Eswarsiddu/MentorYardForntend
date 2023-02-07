@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import Typical from 'react-typical';
+import Typical from "react-typical";
 import { toast } from "react-toastify";
 import axios from "axios";
-import imgBack from "../../assets/Images/ContactUs/mailz2.jpeg";
-import load1 from "../../assets/Images/ContactUs/load2.gif";
-import './ContactUs.css'
+// import imgBack from "../../assets/Images/ContactUs/mailz2.jpeg";
+// import load1 from "../../assets/Images/ContactUs/load2.gif";
+import "./ContactUs.css";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading.js";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
-
 
 export const ContactUs = () => {
   const [name, setName] = useState("");
@@ -17,17 +16,23 @@ export const ContactUs = () => {
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
 
-  const handleName = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleName = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setName(e.target.value);
   };
-  const handleEmail = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleEmail = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setEmail(e.target.value);
   };
-  const handleMessage = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleMessage = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setMessage(e.target.value);
   };
   console.log(name, email, message);
-  const submitForm = async (e: { preventDefault: () => void; }) => {
+  const submitForm = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
       let data = {
@@ -77,10 +82,7 @@ export const ContactUs = () => {
               ]}
             />
           </h2>{" "}
-
-
           <div className="logo__icons">
-
             <a href="https://www.facebook.com/vishalkrsoni">
               <i className="fa fa-facebook-square" />
             </a>
@@ -101,7 +103,11 @@ export const ContactUs = () => {
         <div className="back-form">
           <div className="img-back">
             <h4>Send Your Email Here!</h4>
-            <img src={imgBack} alt="image not found" className="contact__bg__image" />
+            <img
+              src="/Images/ContactUs/mailz2.jpeg"
+              alt="image not found"
+              className="contact__bg__image"
+            />
           </div>
           <form onSubmit={submitForm}>
             <p>{banner}</p>
@@ -120,7 +126,10 @@ export const ContactUs = () => {
                 <i className="fa fa-paper-plane" />
                 {bool ? (
                   <b className="load">
-                    <img src={load1} alt="image not responding" />
+                    <img
+                      src="/Images/ContactUs/load2.gif"
+                      alt="image not responding"
+                    />
                   </b>
                 ) : (
                   ""
@@ -129,6 +138,7 @@ export const ContactUs = () => {
             </div>
           </form>
         </div>
-      </div></div>
-  )
-}
+      </div>
+    </div>
+  );
+};

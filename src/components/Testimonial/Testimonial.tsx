@@ -3,10 +3,10 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Testimonial.css";
-import vivek from "../../assets/Images/Testimonial/AntMan.jpeg";
-import urvish from "../../assets/Images/Testimonial/BlackPanther.jpeg";
-import jangid from "../../assets/Images/Testimonial/DeadPool.jpeg";
-import ankit from "../../assets/Images/Testimonial/DoctorStrange.jpeg";
+// import vivek from "../../assets/Images/Testimonial/AntMan.jpeg";
+// import urvish from "../../assets/Images/Testimonial/BlackPanther.jpeg";
+// import jangid from "../../assets/Images/Testimonial/DeadPool.jpeg";
+// import ankit from "../../assets/Images/Testimonial/DoctorStrange.jpeg";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 
 function Testimonial() {
@@ -45,8 +45,8 @@ function Testimonial() {
           <OwlCarousel
             className="owl-carousel"
             id="testimonial-carousel"
-            {...options}>
-
+            {...options}
+          >
             <div className="col-lg-12">
               <div className="testi-item">
                 <div className="testi-comment">
@@ -78,7 +78,10 @@ function Testimonial() {
                   </ul>
                 </div>
                 <div className="client-info">
-                  <img src={urvish} alt="no internet connection"></img>
+                  <img
+                    src="/Images/Testimonial/urvish.jpeg"
+                    alt="no internet connection"
+                  ></img>
                   <h5>Black Panther</h5>
                   <p>
                     CTO <small>Wakanda Forever</small>{" "}
@@ -89,14 +92,16 @@ function Testimonial() {
                         className="fa fa-linkedin-square"
                         style={{
                           color: "rgba(10,102,194)",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i
                         className="fa fa-instagram"
                         style={{
                           color: "#f55317fc",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i className="fa fa-facebook-square"></i>
@@ -137,7 +142,10 @@ function Testimonial() {
                   </ul>
                 </div>
                 <div className="client-info">
-                  <img src={ankit} alt="no internet connection"></img>
+                  <img
+                    src="/Images/Testimonial/ankit.jpeg"
+                    alt="no internet connection"
+                  ></img>
                   <h5>Doctor Strange</h5>
                   <p>
                     Avengers <small> Doctor</small>
@@ -148,14 +156,16 @@ function Testimonial() {
                         className="fa fa-linkedin-square"
                         style={{
                           color: "rgba(10,102,194)",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i
                         className="fa fa-instagram"
                         style={{
                           color: "#f55317fc",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i className="fa fa-facebook-square"></i>
@@ -202,7 +212,10 @@ function Testimonial() {
                   </ul>
                 </div>
                 <div className="client-info">
-                  <img src={jangid} alt="no internet connection"></img>
+                  <img
+                    src="/Images/Testimonial/jangid.jpeg"
+                    alt="no internet connection"
+                  ></img>
                   <h5>Dead Pool </h5>
                   <p>
                     CTO <small>PrepLeaf</small>
@@ -213,14 +226,16 @@ function Testimonial() {
                         className="fa fa-linkedin-square"
                         style={{
                           color: "rgba(10,102,194)",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i
                         className="fa fa-instagram"
                         style={{
                           color: "#f55317fc",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i className="fa fa-facebook-square"></i>
@@ -261,7 +276,10 @@ function Testimonial() {
                   </ul>
                 </div>
                 <div className="client-info">
-                  <img src={vivek} alt="no internet connection"></img>
+                  <img
+                    src="/Images/Testimonial/vivek.jpeg"
+                    alt="no internet connection"
+                  ></img>
                   <h5>Ant Man</h5>
                   <p>
                     Eater <small>Ants</small>
@@ -272,14 +290,16 @@ function Testimonial() {
                         className="fa fa-linkedin-square"
                         style={{
                           color: "rgba(10,102,194)",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i
                         className="fa fa-instagram social-logo"
                         style={{
                           color: "#f55317fc",
-                        }}></i>
+                        }}
+                      ></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                       <i className="fa fa-facebook-square"></i>
@@ -288,12 +308,11 @@ function Testimonial() {
                 </div>
               </div>
             </div>
-
           </OwlCarousel>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Testimonial;
