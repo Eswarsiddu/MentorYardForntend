@@ -9,7 +9,7 @@ export default function CreateBio() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { currentUser, role } = useAuth();
-  const [profileImage, setProfileImage] = useState<File>();
+  const [profileImage, setProfileImage] = useState<any>();
   const navigate = useNavigate();
   return (
     <>
@@ -47,7 +47,10 @@ export default function CreateBio() {
         <input
           type="file"
           onChange={(e) => {
-            setProfileImage(e.target.files[0]);
+            // console.log(typeof e.target.files[0]);
+            if (e!.target.files) {
+              setProfileImage(e.target.files[0]);
+            }
           }}
         />
         <div>

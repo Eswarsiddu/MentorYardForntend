@@ -78,7 +78,7 @@ export const SubmitBio = async (
     BACKEND_HTTP_URL + "/createbio" + "/" + uid + "?role=" + role,
     {
       method: "POST",
-      body: new URLSearchParams(formData),
+      body: new URLSearchParams(formData as URLSearchParams),
     }
   );
   if (res.status == 200) {
