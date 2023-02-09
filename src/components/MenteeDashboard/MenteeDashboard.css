@@ -1,0 +1,61 @@
+.dashboard__tab {
+  background-color: red;
+  display: flex;
+}
+
+.tab__active {
+  background-color: green;
+}
+
+.dashboard__tab p:hover {
+  cursor: pointer;
+}
+
+.mentor__tile {
+  display: inline-block;
+  position: relative;
+}
+
+.mentors__list {
+  /* display: grid; */
+  /* gap: 0.5rem; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.mentor__tile:hover {
+  cursor: pointer;
+}
+
+.details {
+  display: none;
+}
+
+.mentor__tile:hover .details {
+  display: inline;
+}
+
+.mentor__tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.mentor__tile div {
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.6);
+  /* background-color: red; */
+  width: 100%;
+  left: 50%;
+  /* top: 50%; */
+  bottom: 0;
+  transform: translateX(-50%);
+  overflow: hidden;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: flex-end; */
+}

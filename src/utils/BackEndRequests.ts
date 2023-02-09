@@ -78,12 +78,44 @@ export const SubmitBio = async (
     BACKEND_HTTP_URL + "/createbio" + "/" + uid + "?role=" + role,
     {
       method: "POST",
-      body: new URLSearchParams(formData),
+      body: new URLSearchParams(formData as URLSearchParams),
     }
   );
   if (res.status == 200) {
     return "";
   } else {
     return (await res.json()).msg;
+  }
+};
+
+export const GetAllMentors = async () => {
+  const res = await fetch(BACKEND_HTTP_URL + "/allmentors");
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
+  }
+};
+
+export const GetMyMentors = async () => {
+  const res = await fetch(BACKEND_HTTP_URL + "/getmymentors");
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
+  }
+};
+
+export const GetMentorChat = async (mentorId: string) => {
+  const res = await fetch(
+    BACKEND_HTTP_URL + "/getmentorschat" + "/" + mentorId
+  );
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
   }
 };

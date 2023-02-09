@@ -36,11 +36,5 @@ export default function DashBoard() {
     // });
   }, []);
   if (loading) return <WaitingPage />;
-  return (
-    <div>
-      <p>Dash Board</p>
-      {role == ROLES.MENTEE ? <MenteeDashboard /> : <MentorDashboard />}
-      {/* <p>role{role ? `role is ${role}` : "null"}</p> */}
-    </div>
-  );
+  return role == ROLES.MENTEE ? <MenteeDashboard /> : <MentorDashboard />;
 }

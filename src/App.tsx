@@ -11,6 +11,7 @@ import { SignUp } from "./pages/Signup";
 import NavBar from "./components/NavBar/NavBar";
 import MentorPage from "./pages/MentorPage/MentorPage";
 import Header from "./components/Header/Header";
+import "./App.css";
 
 export function App() {
   return (
