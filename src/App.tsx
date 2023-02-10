@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar/NavBar";
 import MentorPage from "./pages/MentorPage/MentorPage";
 import Header from "./components/Header/Header";
 import MenteeDashboard from "./components/MenteeDashboard/MenteeDashboard";
+import MentorDashboard from "./components/MentorDashboard/MentorDashboard";
 
 
 export function App() {
@@ -67,6 +68,14 @@ export function App() {
         path="/test"
         element={
           <MenteeDashboard />
+        }
+      />
+
+
+      <Route
+        path="/test1"
+        element={
+          <MentorDashboard />
         }
       />
       {/* </Route> */}

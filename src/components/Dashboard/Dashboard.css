@@ -28,11 +28,6 @@ body {
 
 .dashboard__display__content__left {
   margin-left: 140px;
-  color: rgb(34, 19, 19);
-  padding: 44px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 }
 .dashboard__display__content__right {
   width: 40%;
@@ -40,12 +35,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
-}
-.dashboard__display__content__left h1 {
-  font-size: 32px;
-  margin-top: 50px;
-
-  color: rgba(4, 8, 14, 0.747);
 }
 .dashboard__display__content__right h1 {
   font-size: 32px;

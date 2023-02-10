@@ -1,11 +1,10 @@
-import "./MentorDashboard.css";
 import React, { useState } from "react";
+import './Dashboard.css'
 import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFriends, FaUsers, FaBullhorn, FaQuestionCircle } from 'react-icons/fa'
+import VerticalCardSlider from "../VerticalCardSlider/VerticalCardSlider";
 
-
-  export default function () {
-
-  const [isActive, setIsActive] = useState(false);
+const Dashboard = () => {
+  const [ isActive, setIsActive ] = useState(false);
   const toggleActive = () => setIsActive(!isActive);
   return (
     <div className="dashboard__container">
@@ -41,27 +40,25 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
 
       <div className="dashboard__display__content">
         <div className="dashboard__display__content__left">
-          {/* <VerticalCardSlider /> */}
-          <h1>
-            Right Content part
-          </h1>
+          <VerticalCardSlider />
+
 
         </div>
         <div className="dashboard__display__content__right">
           <h1>
-             Left Content part
+            Content part
           </h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 
             Officiis voluptas labore molestiae ipsam quaerat provident
             libero cupiditate voluptatibus quas dolores. Mollitia expedita nobis fugit,
             placeat veritatis molestias eaque odit a ut obcaecati nostrum temporibus cum officia,
-            accusantium voluptatum provident fugiat dolores similique doloremque! Sint optio voluptas
-            Officiis voluptas labore molestiae ipsam quaerat provident
-            libero cupiditate voluptatibus quas dolores. Mollitia expedita nobis fugit,
-            placeat veritatis molestias eaque odit a ut obcaecati nostrum temporibus cum officia,
-            accusantium voluptatum provident fugiat dolores similique doloremque! Sint optio voluptas
-            soluta pariatur, incidunt quasi nulla voluptatum neque architecto, quis animi debitis mollitia! Illum corporis quod quisquam. Perferendis sequi ex cum? Expedita consectetur, iure et fugiat natus a mollitia accusamus magni dolorem vitae culpa quidem dolore sapiente libero minima! Ab doloremque impedit nulla dolorem amet iste mollitia, itaque repellat veritatis a. Odio, doloribus quo.</p>
+            accusantium voluptatum provident fugiat dolores similique doloremque! Sint optio voluptas 
+             Officiis voluptas labore molestiae ipsam quaerat provident 
+             libero cupiditate voluptatibus quas dolores. Mollitia expedita nobis fugit,
+              placeat veritatis molestias eaque odit a ut obcaecati nostrum temporibus cum officia, 
+              accusantium voluptatum provident fugiat dolores similique doloremque! Sint optio voluptas 
+              soluta pariatur, incidunt quasi nulla voluptatum neque architecto, quis animi debitis mollitia! Illum corporis quod quisquam. Perferendis sequi ex cum? Expedita consectetur, iure et fugiat natus a mollitia accusamus magni dolorem vitae culpa quidem dolore sapiente libero minima! Ab doloremque impedit nulla dolorem amet iste mollitia, itaque repellat veritatis a. Odio, doloribus quo.</p>
         </div>
       </div>
 
@@ -79,27 +76,27 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
         </div>
         <div className="menu-center">
           <div className="menu-item">
-            <FaHome />
+            <i className="fas fa-home"><FaHome /></i>
 
             <span>Home</span>
           </div>
           <div className="menu-item">
-              <FaPaperPlane />
+            <i className="fas fa-paper-plane"><FaPaperPlane /></i>
 
             <span>My DashBoard</span>
           </div>
           <div className="menu-item">
-              <FaUserFriends />
+            <i className="fas fa-user-friends"><FaUserFriends /></i>
 
             <span>My Mentors</span>
           </div>
           <div className="menu-item">
-              <FaUsers />
+            <i className="fas fa-users"><FaUsers /></i>
 
             <span>All Mentors</span>
           </div>
           <div className="menu-item">
-              <FaBullhorn />
+            <i className="fas fa-bullhorn"><FaBullhorn /></i>
 
             <span>Updates</span>
           </div>
@@ -109,4 +106,4 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
   );
 };
 
-// export default MentorDashboard
+export default Dashboard

@@ -56,7 +56,7 @@ const MenteeDashboard = () => {
       </div>
 
 
-      <div className="dashboard__display__content">
+      <div className="display__content">
         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Dolorem blanditiis est a esse hic maiores natus iusto temporibus
 
