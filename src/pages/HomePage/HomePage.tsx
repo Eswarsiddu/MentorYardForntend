@@ -4,12 +4,17 @@ import Testimonial from '../../components/Testimonial/Testimonial';
 import { ContactUs } from '../../components/ContactUs/ContactUs';
 import Footer from '../../components/Footer/Footer';
 import OurMentors from '../../components/OurMentors/OurMentors';
+import { FlippingCard } from '../../components/FlippingCard/FlippingCard';
+// import SlidingDisplayCard from '../../components/SlidingDisplayCard/SlidingDisplayCard';
 
 
 function HomePage() {
   return (
     <div>
       <Home />
+
+      {/* <FlippingCard /> */}
+      {/* <SlidingDisplayCard /> */}
       <OurMentors />
       <Testimonial />
       <ContactUs />
