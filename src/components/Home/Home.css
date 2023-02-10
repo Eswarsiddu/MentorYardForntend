@@ -11,6 +11,16 @@
   margin-top: 8vh;
 }
 
+.home__contents h5 {
+  color: rgba(15, 25, 25, 0.564);
+  margin-left: 1.3rem;
+}
+
+.home__contents p {
+  color: rgba(15, 25, 25, 0.564);
+
+  margin-left: 1.3rem;
+}
 .home__carousel {
   margin: 12px;
   padding: 14px;
@@ -35,6 +45,7 @@
 }
 
 .heading {
-  color: tomato;
+  color: rgb(240, 82, 54);
   margin-top: 22px;
+  /* font-size: 18px; */
 }

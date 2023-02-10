@@ -11,6 +11,8 @@ import { SignUp } from "./pages/Signup";
 import NavBar from "./components/NavBar/NavBar";
 import MentorPage from "./pages/MentorPage/MentorPage";
 import Header from "./components/Header/Header";
+import MenteeDashboard from "./components/MenteeDashboard/MenteeDashboard";
+
 
 export function App() {
   return (
@@ -19,6 +21,7 @@ export function App() {
         path="/"
         element={
           <AuthenticatedRoute>
+            <Header />
             <HomePage />
           </AuthenticatedRoute>
         }
@@ -27,6 +30,7 @@ export function App() {
         path="/login"
         element={
           <AuthenticatedRoute>
+            <Header />
             <Login />
           </AuthenticatedRoute>
         }
@@ -35,6 +39,7 @@ export function App() {
         path="/signup"
         element={
           <AuthenticatedRoute>
+            <Header />
             <SignUp />
           </AuthenticatedRoute>
         }
@@ -43,6 +48,7 @@ export function App() {
         path="/dashboard"
         element={
           <ProtectedRoute>
+            <Header />
             <DashBoard />
           </ProtectedRoute>
         }
@@ -51,8 +57,16 @@ export function App() {
         path="/createbio"
         element={
           <ProtectedRoute>
+            <Header />
             <CreateBio />
           </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/test"
+        element={
+          <MenteeDashboard />
         }
       />
       {/* </Route> */}
