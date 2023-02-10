@@ -38,7 +38,7 @@ function VerticalCarousel() {
           </div>
           <div className="slider__text">
             <h2 className="slider__text__name">Vishal Soni</h2>
-            <h3 className="slider__text__occupation">Co-Founder & CTO</h3>
+            <h3 className="slider__text__occupation">Co-Founder & CTO </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
@@ -58,7 +58,7 @@ function VerticalCarousel() {
           </div>
           <div className="slider__text">
             <h2 className="slider__text__name">Siddu Eswar</h2>
-            <h3 className="slider__text__occupation">Co-Founder & CTO</h3>
+            <h3 className="slider__text__occupation">Co-Founder & CTO </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
@@ -77,8 +77,8 @@ function VerticalCarousel() {
             />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Irfan Ansari</h2>
-            <h3 className="slider__text__occupation">Tech Lead </h3>
+            <h2 className="slider__text__name">Vivek Regmi</h2>
+            <h3 className="slider__text__occupation">Founder & CEO </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum
