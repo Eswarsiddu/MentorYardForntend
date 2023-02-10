@@ -12,7 +12,7 @@ export const FlippingCard = () => {
             <img src={frontImage}
             />
           </div>
-          <div className="mentor__info">
+          <div className="mentor__info front__info">
             <h4>Name</h4>
             <p>Company</p>
             <span>Domain</span>
@@ -21,8 +21,10 @@ export const FlippingCard = () => {
         <div className="card back-face">
           <img src={backImage}
           />
-          <div className="info">
-            <div className="title">Super Man</div>
+          <div className="info back__info">
+            <div className="title">
+              Super Man
+            </div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Ullam laboriosam quam vero minus,
               dolore perspiciatis fugit assumenda rem architecto nostrum.</p>
