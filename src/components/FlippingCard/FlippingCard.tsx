@@ -1,6 +1,6 @@
 import React from 'react'
 import './FlippingCard.css'
-import frontImage from '../../../public/Mentors/AntMan.jpeg'
+import frontImage from '../../../public/Images/Mentors/AntMan.jpeg'
 import backImage from '../../../public/Images/Mentors/SuperMan.jpeg'
 
 export const FlippingCard = () => {
@@ -8,8 +8,15 @@ export const FlippingCard = () => {
     <div>
       <div className="wrapper">
         <div className="card front-face">
-          <img src={frontImage}
-          />
+          <div className="mentor__front__pic">
+            <img src={frontImage}
+            />
+          </div>
+          <div className="mentor__info">
+            <h4>Name</h4>
+            <p>Company</p>
+            <span>Domain</span>
+          </div>
         </div>
         <div className="card back-face">
           <img src={backImage}
