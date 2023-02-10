@@ -42,9 +42,14 @@ const MenteeDashboard = () => {
         </div>
         <div className="topbar-right">
           <div className="line-container" onClick={toggleActive}>
-            <div className="line line-1"></div>
+            {/* <div className="line line-1"></div>
             <div className="line line-2"></div>
-            <div className="line line-3"></div>
+            <div className="line line-3"></div> */}
+            <img
+           
+              src="https://images.pexels.com/photos/5944321/pexels-photo-5944321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              alt=""
+            />
           </div>
         </div>
 
