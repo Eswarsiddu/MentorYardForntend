@@ -24,11 +24,20 @@ const MenteeDashboard = () => {
           <h1>MentorYard</h1>
         </div>
         <div className="topbar-center">
-          <div className="topbar-search">
+          {/* <div className="topbar-search">
             <FaSearch />
 
+
             <input type="text" placeholder="Search..." />
+          </div> */}
+          <div className="tab__options">
+            <span>Home</span>
+            <span>About</span>
+            <span>MyMentors</span>
+            <span>AllMentors</span>
+
           </div>
+
 
         </div>
         <div className="topbar-right">
@@ -45,7 +54,7 @@ const MenteeDashboard = () => {
       <div className="dashboard__display__content">
         <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Dolorem blanditiis est a esse hic maiores natus iusto temporibus
-         
+
           um illum! Aliquid quis eum aperiam quo explicabo accusamus, eveniet dicta pariatur provident
           voluptatem corrupti ipsum accusantium maiores possimus error mollitia dolores, at rerum quibusdam
           magnam odio! Voluptatum, suscipit veniam porro delectus laboriosam recusandae officiis reiciendis,
@@ -55,7 +64,7 @@ const MenteeDashboard = () => {
 
         {/* <OurMentors /> */}
 
-        
+
       </div>
 
 
