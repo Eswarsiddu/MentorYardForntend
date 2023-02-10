@@ -1,9 +1,15 @@
 import "./MentorDashboard.css";
 import React, { useState } from "react";
-import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFriends, FaUsers, FaBullhorn, FaQuestionCircle } from 'react-icons/fa'
+import {
+  FaSearch, FaHome,
+  FaPaperPlane, FaUserFriends,
+  FaUsers, FaBullhorn,
+  FaMediumM, FaJenkins,
+  FaQuestionCircle,
+} from 'react-icons/fa'
 
 
-  export default function () {
+export default function () {
 
   const [isActive, setIsActive] = useState(false);
   const toggleActive = () => setIsActive(!isActive);
@@ -49,7 +55,7 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
         </div>
         <div className="dashboard__display__content__right">
           <h1>
-             Left Content part
+            Left Content part
           </h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 
@@ -84,22 +90,22 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
             <span>Home</span>
           </div>
           <div className="menu-item">
-              <FaPaperPlane />
+            <FaPaperPlane />
 
             <span>My DashBoard</span>
           </div>
           <div className="menu-item">
-              <FaUserFriends />
+            <FaUserFriends />
 
             <span>My Mentors</span>
           </div>
           <div className="menu-item">
-              <FaUsers />
+            <FaUsers />
 
             <span>All Mentors</span>
           </div>
           <div className="menu-item">
-              <FaBullhorn />
+            <FaBullhorn />
 
             <span>Updates</span>
           </div>
@@ -109,4 +115,3 @@ import { FaIgloo, FaSearch, FaHome, FaMediumM, FaJenkins, FaPaperPlane, FaUserFr
   );
 };
 
-// export default MentorDashboard
