@@ -43,18 +43,13 @@ const MenteeDashboard = () => {
 
 
       <div className="dashboard__display__content">
-        {/* <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Dolorem blanditiis est a esse hic maiores natus iusto temporibus
-          earum tempora id provident, quas vitae expedita recusandae! Cupiditate a
-          dipisci odit libero, quasi consequatur dicta modi aspernatur nulla possimus n
-          esciunt incidunt quibusdam deleniti dignissimos dolores. Incidunt vel consectetur
-          asperiores nesciunt quaerat maxime, voluptate officia ut, illum beatae repellat ani
-          mi? Impedit minima velit placeat sint voluptatem, commodi sequi explicabo ducimus quibusd
-          am ab temporibus, eveniet voluptates repellat enim iste laudantium exercitationem accusanti
+         
           um illum! Aliquid quis eum aperiam quo explicabo accusamus, eveniet dicta pariatur provident
           voluptatem corrupti ipsum accusantium maiores possimus error mollitia dolores, at rerum quibusdam
           magnam odio! Voluptatum, suscipit veniam porro delectus laboriosam recusandae officiis reiciendis,
-          beatae, perspiciatis sint provident. Debitis, officia nemo!</h3> */}
+          beatae, perspiciatis sint provident. Debitis, officia nemo!</h5>
         <FlippingCard />
         {/* <FlippingCard /> */}
 
