@@ -4,8 +4,18 @@
   width: 90%;
   display: flex;
   gap: 12px;
+  flex-direction: column;
+  margin-top: 190px;
+  padding: 12px;
   /* box-shadow: rgba(5, 5, 138, 0.25) 0px 30px 60px -12px inset,
     rgba(128, 5, 5, 0.3) 0px 18px 36px -18px inset; */
 
   /* padding: 44px; */
+}
+
+.mentors__rows {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  row-gap: 22px;
 }

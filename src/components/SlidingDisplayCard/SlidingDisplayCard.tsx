@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import './SlidingDisplayCards.css';
+import './SlidingDisplayCard.css';
 import frontImage from "../../../public/Mentors/AntMan.jpeg";
 
 

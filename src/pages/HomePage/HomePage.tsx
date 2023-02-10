@@ -18,7 +18,7 @@ function HomePage() {
 
       {/* <FlippingCard /> */}
       {/* <SlidingDisplayCard /> */}
-      <OurMentors />
+      {/* <OurMentors /> */}
       <DisplayMentors />
 
       <Testimonial />
