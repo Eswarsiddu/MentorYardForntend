@@ -31,7 +31,7 @@ function VerticalCarousel() {
         <div className="slider__content">
           <div className="slider__pic">
             <img
-              src="/Images/MentorsSlider/1.jpeg"
+              src="/Images/MentorsSlider/1.png"
               alt="Person"
               className="slider__image"
             />
@@ -51,7 +51,7 @@ function VerticalCarousel() {
         <div className="slider__content">
           <div className="slider__pic">
             <img
-              src="/Images/MentorsSlider/4.jpg"
+              src="/Images/MentorsSlider/4.png"
               alt="Person"
               className="slider__image"
             />
@@ -71,14 +71,14 @@ function VerticalCarousel() {
         <div className="slider__content">
           <div className="slider__pic">
             <img
-              src="/Images/MentorsSlider/2.jpeg"
+              src="/Images/MentorsSlider/2.png"
               alt="Person"
               className="slider__image"
             />
           </div>
           <div className="slider__text">
-            <h2 className="slider__text__name">Irfan Ansari</h2>
-            <h3 className="slider__text__occupation">Tech Lead </h3>
+            <h2 className="slider__text__name">Vivek Regmi</h2>
+            <h3 className="slider__text__occupation"> CEO </h3>
             <p className="slider__text__description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
               qui culpa quaerat possimus obcaecati, porro quidem deserunt eum

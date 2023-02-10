@@ -3,7 +3,7 @@
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  background-color: rgb(224, 40, 40);
+  background-color: rgba(144, 147, 152, 0.445);
   flex: 0.5;
 }
 
