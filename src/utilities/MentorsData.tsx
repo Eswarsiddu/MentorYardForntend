@@ -1,50 +1,46 @@
-import AntMan from '../assets/Images/Mentors/AntMan.jpeg'
-
+import AntMan from "../assets/Images/Mentors/AntMan.jpeg";
 
 const mentorsData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: "https://mcdn.wallpapersafari.com/medium/67/78/LvJuyh.png",
+    title: "Naruto",
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: "https://mcdn.wallpapersafari.com/medium/65/55/KpyA8S.png",
+    title: "Boruto",
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: "https://mcdn.wallpapersafari.com/medium/45/16/r7T53O.jpg",
+    title: "Itachi",
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: "https://mcdn.wallpapersafari.com/medium/78/92/ygSU3c.jpg",
+    title: "sasuke",
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
+    img: "https://mcdn.wallpapersafari.com/medium/67/97/eRPQI1.jpg",
+    title: "Minato",
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
+    img: "https://mcdn.wallpapersafari.com/medium/67/32/b1pVLd.jpg",
+    title: "Madara",
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
+    img: "https://mcdn.wallpapersafari.com/medium/52/65/Dp2fw1.png",
+    title: "Hashirama",
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
+    img: "https://mcdn.wallpapersafari.com/medium/45/86/XCaf2L.jpg",
+    title: "tobirama",
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
+    img: "https://mcdn.wallpapersafari.com/medium/33/80/EZLeNB.jpg",
+    title: "kakashi",
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
+    img: "https://mcdn.wallpapersafari.com/medium/31/88/iHqrgk.jpg",
+    title: "jiraya",
   },
-
 ];
 
-export default mentorsData
-
-
+export default mentorsData;
