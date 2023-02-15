@@ -1,4 +1,4 @@
-.sign__up__form__container {
+/* .sign__up__form__container {
   width: 80vw;
   display: flex;
   align-items: center;
@@ -14,7 +14,6 @@
   border-radius: 12px;
   padding: 50px;
   color: white;
-
 }
 
 input,
@@ -60,4 +59,4 @@ textarea {
 .forgot {
   margin-top: -20px;
   text-align: right;
-}
+} */

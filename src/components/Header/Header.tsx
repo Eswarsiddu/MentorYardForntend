@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 function Header() {
-  const { currentUser, logout, profileImage } = useAuth();
+  const { currentUser, logout, bioDetails } = useAuth();
   const navigate = useNavigate();
   return (
     <div className="header__container">
@@ -36,12 +36,18 @@ function Header() {
           )}
           {currentUser ? (
             <>
-              <img
-                src={profileImage}
-                alt="profile"
-                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
-              />
-              <p style={{ color: "white" }}>{currentUser.displayName}</p>
+              <div
+                onClick={(e) => {
+                  navigate("/profile");
+                }}
+              >
+                <img
+                  src={bioDetails.photo}
+                  alt="profile"
+                  style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                />
+                <p style={{ color: "white" }}>{currentUser.displayName}</p>
+              </div>
               <button
                 onClick={async () => {
                   await logout();

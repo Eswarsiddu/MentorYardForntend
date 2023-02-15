@@ -1,4 +1,4 @@
-import { BACKEND_HTTP_URL } from "./Contants";
+import { BACKEND_HTTP_URL } from "./Constants";
 export const CreateUser = (
   email: string,
   name: string,

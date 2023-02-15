@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import ROLES from "../../types/RolesEnum";
-import { CreateUser } from "../../utils/BackEndRequests";
-import { checkPasswordContraints } from "../../utils/Contants";
+import { addMentee, addMentor } from "../../utils/BackendRequests";
+import { checkPasswordContraints } from "../../utils/Constants";
 import { auth } from "../../utils/FireBaseConfig";
-import './SignUp.css'
+import "./SignUp.css";
 export default function SignUp() {
   const { register, currentUser } = useAuth();
   const [loading, setLoading] = useState(false);
@@ -18,8 +18,6 @@ export default function SignUp() {
     name: "",
     role: ROLES.MENTEE,
   });
-
-
 
   return (
     <div className="sign__up__form__container">
@@ -55,13 +53,16 @@ export default function SignUp() {
             console.log(e);
             if (e.code == "auth/email-already-in-use") setEmailError(true);
             else
-              setCommonError("Internal Server Error, Plese trye after some time");
+              setCommonError(
+                "Internal Server Error, Plese trye after some time"
+              );
           }
         }}
       >
         <div>
           <Link to="/login">Login</Link>
-          <div>
+          <div style={{ display: "flex" }}>
+            <label> Mentee </label>
             <input
               type="radio"
               className="sign__up__role"
@@ -70,9 +71,9 @@ export default function SignUp() {
               defaultChecked
               required
             />
-            <label> Mentee </label>
           </div>
-          <div>
+          <div style={{ display: "flex" }}>
+            <label> Mentor </label>
             <input
               type="radio"
               className="sign__up__role"
@@ -80,7 +81,6 @@ export default function SignUp() {
               value={ROLES.MENTOR}
               required
             />
-            <label> Mentor </label>
           </div>
         </div>
         <div>
@@ -90,7 +90,8 @@ export default function SignUp() {
             className="sign__up__name"
             placeholder="Your Name"
             name="name"
-            required />
+            required
+          />
         </div>
         <div>
           <label> Email </label>
@@ -99,7 +100,8 @@ export default function SignUp() {
             className="sign__up__email"
             placeholder="Enter Your Email"
             name="email"
-            required />
+            required
+          />
           {emailError && <p> Email Already In Use </p>}
         </div>
         <div>
@@ -109,14 +111,12 @@ export default function SignUp() {
             className="sign__up__password"
             placeholder=" Super Secret Password"
             name="password"
-            required />
+            required
+          />
         </div>
         {commonError != "" && <p> {commonError} </p>}
         <button type="submit"> {loading ? "Loading" : "Signup"} </button>
       </form>
     </div>
-
-
-
   );
 }

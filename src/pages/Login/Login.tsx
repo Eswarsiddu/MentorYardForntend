@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import "./Login.css";
 import ROLES from "../../types/RolesEnum";
 export function Login() {
   const [loading, setLoading] = useState(false);
@@ -13,7 +14,7 @@ export function Login() {
         e.preventDefault();
         setLoading(true);
         const formData = new FormData(e.target as HTMLFormElement);
-        const _role = formData.get("role") as string;
+        // const _role = formData.get("role") as string;
         const email = formData.get("email") as string;
         const password = formData.get("password") as string;
         // setError("test error");
@@ -21,7 +22,7 @@ export function Login() {
         // return;
         try {
           console.log("loggin in");
-          const loginStatus = await login(email, password, _role); // Firebase Authentication
+          const loginStatus = await login(email, password); // Firebase Authentication
           // setError("roles doen't match");
           return;
           if (loginStatus) {
@@ -39,22 +40,6 @@ export function Login() {
     >
       <div>
         <Link to="/signup">create account</Link>
-        <div>
-          <input
-            type="radio"
-            name="role"
-            value={ROLES.MENTEE}
-            defaultChecked
-            required
-          />
-          <label>Mentee</label>
-        </div>
-        <div>
-          <input type="radio" name="role" value={ROLES.MENTOR} required />
-          <label>Mentor</label>
-        </div>
-      </div>
-      <div>
         <label>Email</label>
         <input type="email" name="email" required autoFocus />
       </div>

@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar/NavBar";
 import MentorPage from "./pages/MentorPage/MentorPage";
 import Header from "./components/Header/Header";
 import "./App.css";
+import { Profile } from "./pages/Profile";
 
 export function App() {
   return (
@@ -41,6 +42,14 @@ export function App() {
         }
       />
       <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/dashboard"
         element={
           <ProtectedRoute>
@@ -56,7 +65,6 @@ export function App() {
           </ProtectedRoute>
         }
       />
-      {/* </Route> */}
     </Routes>
   );
 }
