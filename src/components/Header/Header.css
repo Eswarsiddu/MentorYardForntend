@@ -1,15 +1,21 @@
+.header__container {
+  background:black;
+  width: 100vw;
+  z-index: 8;
+  /* margin-bottom: 63vh; */
+}
+
 .header {
-  overflow: hidden;
-  background-color: rgb(25, 24, 24);
+  /* overflow: hidden; */
+  /* background-color: rgb(25, 24, 24); */
   padding: 20px 10px;
   display: flex;
-  z-index: 9;
+  z-index: 8;
   width: 100%;
   height: 120px;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .header a {
   float: left;
@@ -20,28 +26,30 @@
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
+  z-index: 8;
 }
-
 
 .header a.logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-
+  z-index: 8;
 }
-
 
 .header__tab:hover {
   background-color: white;
   color: tomato;
+  z-index: 8;
 }
 
 .header a.active {
   color: tomato;
+  z-index: 8;
 }
 
 .header-right {
   float: right;
   margin-top: 12px;
+  z-index: 8;
 }
 
 @media screen and (max-width: 500px) {
@@ -49,8 +57,10 @@
     float: none;
     display: block;
     text-align: left;
+    z-index: 8;
   }
   .header-right {
     float: none;
+    z-index: 8;
   }
 }

@@ -5,11 +5,16 @@
   border-radius: 50%;
   background-color: rgb(224, 40, 40);
   flex: 0.5;
+  z-index: -1;
+
 }
 
 .slider__container {
   height: 900px;
   width: 50%;
+  z-index: -1;
+  margin-top: 5vh;
+
   /* background-color: rgb(19, 133, 108); */
 }
 

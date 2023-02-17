@@ -12,7 +12,7 @@ function Header() {
           <img
             src="/Images/logoDesigns/finalLogo.svg"
             alt="logo"
-            width={400}
+            width={300}
             height={200}
             className="company__logo"
           />
