@@ -10,13 +10,21 @@ import {
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContextInterface } from "../types/AutheContextInterface";
-import { CreateUser, GetRole } from "../utils/BackEndRequests";
+import RolesEnum from "../types/RolesEnum";
+import {
+  addMentee,
+  addMentor,
+  getMenteeByFuid,
+  getMentorByFuid,
+  getRole,
+} from "../utils/BackendRequests";
 import { auth } from "../utils/FireBaseConfig";
+import ROLES from "../types/RolesEnum";
 
 const AuthContext = createContext<AuthContextInterface>({
   currentUser: undefined,
   role: null,
-  login: (email: string, password: string, _role: string) => Promise.resolve(),
+  login: (email: string, password: string) => Promise.resolve(),
   register: (
     email: string,
     password: string,
@@ -26,8 +34,7 @@ const AuthContext = createContext<AuthContextInterface>({
   logout: () => Promise.resolve(),
   updateDisplayName: (fullName: string) => Promise.resolve(),
   updateEmailAddress: (email: string) => Promise.resolve(),
-  setProfileImage: (imageUrl: string) => {},
-  profileImage: "",
+  bioDetails: {},
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -37,12 +44,24 @@ export default function AuthContextProvider({ children }: any) {
     undefined
   );
   const [role, setRole] = useState<string | null | undefined>(null);
-  const [profileImage, setProfileImage] = useState("");
+  const [bioDetails, setBioDetails] = useState<any>({});
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        const gettingRole = await GetRole(user.uid);
+        const gettingRole = await getRole(user.uid);
         console.log("getting role", gettingRole);
+        const data = await (gettingRole == ROLES.MENTEE
+          ? getMenteeByFuid
+          : getMentorByFuid)(user!.uid);
+        console.log("bio data", data);
+        if (data) {
+          if (data.address) {
+            console.log("has address");
+            setBioDetails(data);
+          } else {
+            console.log("no address");
+          }
+        }
         setRole(gettingRole);
       }
       setCurrentUser(user);
@@ -62,25 +81,27 @@ export default function AuthContextProvider({ children }: any) {
     ) =>
       createUserWithEmailAndPassword(auth, email, password).then(
         async (result) => {
-          await CreateUser(email, fullName, _role, auth.currentUser!.uid);
-          setRole(_role);
-          return updateProfile(result.user, { displayName: fullName });
+          if (_role == RolesEnum.MENTEE) {
+            await addMentee(auth.currentUser!.uid, fullName, email);
+          } else {
+            await addMentor(auth.currentUser!.uid, fullName, email);
+          }
+          // await CreateUser(email, fullName, _role, auth.currentUser!.uid);
+          updateProfile(result.user, { displayName: fullName });
+          // setRole(_role);
+          setRole(null);
+          await signOut(auth);
         }
       ),
-    login: (email: string, password: string, _role: string) => {
-      return signInWithEmailAndPassword(auth, email, password).then(
-        async () => {
-          const uid = auth.currentUser!.uid;
-          const gettingRole = await GetRole(uid);
-          if (gettingRole != _role) {
-            await signOut(auth);
-            setRole(undefined);
-            return false;
-          }
-          setRole(gettingRole);
-          return true;
-        }
-      );
+    login: async (email: string, password: string) => {
+      await signInWithEmailAndPassword(auth, email, password);
+      const uid = auth.currentUser!.uid;
+      const gettingRole = await getRole(uid);
+      if (gettingRole) {
+        setRole(gettingRole);
+      } else {
+        await signOut(auth);
+      }
     },
     updateDisplayName: (fullName: string) =>
       updateProfile(currentUser!, { displayName: fullName }),
@@ -89,10 +110,7 @@ export default function AuthContextProvider({ children }: any) {
       setRole(null);
       return signOut(auth);
     },
-    setProfileImage: (url: string) => {
-      setProfileImage(url);
-    },
-    profileImage,
+    bioDetails,
   };
   return (
     <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>

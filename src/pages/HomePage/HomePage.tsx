@@ -10,7 +10,6 @@ function HomePage() {
   return (
     <div>
       <Home />
-    
       <OurMentors />
       <Testimonial />
       <ContactUs />

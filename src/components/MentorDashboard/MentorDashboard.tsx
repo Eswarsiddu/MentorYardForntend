@@ -1,4 +1,9 @@
+import { ChatBlock } from "../ChatBlock/ChatBlock";
 import "./MentorDashboard.css";
 export default function () {
-  return <div>MENTOR DASHBOARD</div>;
+  return (
+    <div>
+      <ChatBlock />
+    </div>
+  );
 }

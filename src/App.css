@@ -1,8 +1,13 @@
-* {
+#root {
+  width: 100%;
+}
+
+#root * {
   margin: 0;
   padding: 0;
 }
-#root{
-  /* background-color: #fff; */
-  width: 100%;
+
+input {
+  border: 1px solid black !important;
+  padding: 0.5rem 1rem !important;
 }

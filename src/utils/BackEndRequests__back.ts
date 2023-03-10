@@ -1,4 +1,4 @@
-import { BACKEND_HTTP_URL } from "./Contants";
+import { BACKEND_HTTP_URL } from "./Constants";
 export const CreateUser = (
   email: string,
   name: string,
@@ -85,5 +85,37 @@ export const SubmitBio = async (
     return "";
   } else {
     return (await res.json()).msg;
+  }
+};
+
+export const GetAllMentors = async () => {
+  const res = await fetch(BACKEND_HTTP_URL + "/allmentors");
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
+  }
+};
+
+export const GetMyMentors = async () => {
+  const res = await fetch(BACKEND_HTTP_URL + "/getmymentors");
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
+  }
+};
+
+export const GetMentorChat = async (mentorId: string) => {
+  const res = await fetch(
+    BACKEND_HTTP_URL + "/getmentorschat" + "/" + mentorId
+  );
+  const jsonData = await res.json();
+  if (res.status == 200) {
+    return jsonData;
+  } else {
+    return [];
   }
 };
